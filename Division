@@ -1,0 +1,9 @@
+#Unix shell script for division of two numbers
+#using expr
+
+num1=100
+num2=20
+
+ans=`expr $num1 / $num2`
+
+echo $ans
