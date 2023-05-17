@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Enter the total marks: "
+read total_marks
+
+echo "Enter the obtained marks: "
+read obtained_marks
+
+percentage=$(echo "scale=2; ($obtained_marks / $total_marks) * 100" | bc)
+
+echo "Percentage: $percentage%"
