@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Enter a binary number: "
+read binary
+
+decimal=0
+power=0
+
+while [ $binary -gt 0 ]; do
+  bit=$(( binary % 10 ))
+  decimal=$(( decimal + (bit * (2 ** power)) ))
+  power=$(( power + 1 ))
+  binary=$(( binary / 10 ))
+done
+
+echo "Decimal equivalent: $decimal"
